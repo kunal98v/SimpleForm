@@ -53,7 +53,7 @@ export const FormDetails = () => {
       </form>
       {dataList.length != 0 && (
         <div className="flex flex-col items-center justify-center">
-          <table className="table-auto border border-black w-6/12">
+          <table className="table-auto border border-black w-5/12">
             <thead>
               <tr>
                 <td className="border border-black px-4 py-2">Name</td>
