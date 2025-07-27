@@ -7,6 +7,7 @@ import { CounterRedux } from "./components/CounterRedux";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import { TodoList } from "./components/TodoList";
+import { TodoListRedux } from "./components/TodoListRedux";
 
 function App() {
 
@@ -16,10 +17,11 @@ function App() {
      {/* <ReducerCounter/> */}
      {/* <FormDetails/> */}
      {/* <FormDetailsRef/> */}
-     <TodoList/>
-     {/* <Provider store={appStore}>
-      <CounterRedux/>
-     </Provider> */}
+     {/* <TodoList/> */}
+      <Provider store={appStore}>
+        <TodoListRedux/>
+      {/* <CounterRedux/> */}
+      </Provider> 
     </>
   );
 }
