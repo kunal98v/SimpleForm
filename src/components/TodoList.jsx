@@ -6,7 +6,12 @@ export const TodoList = () => {
   const todo = useRef(null);
 
   const addTodo = () => {
-    setData([...data, {todo : todo.current.value, status: false}]);
+    setData([...data, {todo : todo.current.value, status: false, count : 0}]);
+  }
+
+  const handleInc = (index) => {
+    const incTodo = data.map((item, key) => index == key ? {...item, count : item.count+1} : item)
+    setData(incTodo)
   }
 
   const handleRemove = (index) => {
@@ -15,7 +20,7 @@ export const TodoList = () => {
   }
 
   const handleComplete = (index) => {
-      const completeData = data.map((item, key) => index == key ? {todo : item.todo , status : !item.status} : item)
+      const completeData = data.map((item, key) => index == key ? {...item , status : !item.status} : item)
       setData(completeData)
   }
   return (
@@ -43,6 +48,9 @@ export const TodoList = () => {
           >
             <div className= {item.status ? "line-through" : ""}>{item.todo}</div>
             <div>
+              <span>Count : {item.count}</span>
+              <button className="bg-purple-400 w-12 cursor-pointer mx-2 hover:bg-purple-500 rounded-md"
+                onClick={() => handleInc(index)}>Inc</button>
               <button
                 className="bg-yellow-400 w-12 cursor-pointer mx-2 hover:bg-yellow-500 rounded-md"
                 onClick={() => handleComplete(index)}
