@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import { TodoList } from "./components/TodoList";
 import { TodoListRedux } from "./components/TodoListRedux";
+import { Accoridan } from "./components/Accoridan";
 
 function App() {
 
@@ -19,7 +20,8 @@ function App() {
      {/* <FormDetailsRef/> */}
      {/* <TodoList/> */}
       <Provider store={appStore}>
-        <TodoListRedux/>
+        {/* <TodoListRedux/> */}
+        <Accoridan/>
       {/* <CounterRedux/> */}
       </Provider> 
     </>
