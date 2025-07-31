@@ -3,7 +3,7 @@ import PaginationCard from "./PaginationCard";
 
 const Pagination = () => {
   const [data, setData] = useState([]);
-  const [perPage, setPerPage] = useState(10);
+  const [perPage, setPerPage] = useState(5);
   const [currentPage, setCurrentPage] = useState(1);
 
   const lastPage = currentPage * perPage;
