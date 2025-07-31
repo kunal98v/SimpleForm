@@ -9,21 +9,22 @@ import appStore from "./utils/appStore";
 import { TodoList } from "./components/TodoList";
 import { TodoListRedux } from "./components/TodoListRedux";
 import { Accoridan } from "./components/Accoridan";
+import Pagination from "./components/Pagination";
 
 function App() {
-
   return (
     <>
-     {/* <Counter/> */}
-     {/* <ReducerCounter/> */}
-     {/* <FormDetails/> */}
-     {/* <FormDetailsRef/> */}
-     {/* <TodoList/> */}
-      <Provider store={appStore}>
-        {/* <TodoListRedux/> */}
-        <Accoridan/>
+      {/* <Counter/> */}
+      {/* <ReducerCounter/> */}
+      {/* <FormDetails/> */}
+      {/* <FormDetailsRef/> */}
+      {/* <TodoList/> */}
+      {/* <Provider store={appStore}> */}
+      {/* <TodoListRedux/> */}
+      {/* <Accoridan/> */}
       {/* <CounterRedux/> */}
-      </Provider> 
+      {/* </Provider>  */}
+      <Pagination />
     </>
   );
 }
